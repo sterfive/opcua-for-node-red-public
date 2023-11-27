@@ -1,41 +1,51 @@
 @opcua/for-node-red  (Preview Version)
 
-:rotating_light: this product is currently provided as beta version. 
+__this product is currently provided as a beta version.__
 
 
-This node is the second next generation OPCUA Node for NodeRED build by Sterfive, the company that develops the [NodeOPCUA](https://node-opcua.github.io/) stack.
+This node is the second next-generation OPCUA Node for NodeRED built by Sterfive, the company that develops the [NodeOPCUA](https://node-opcua.github.io/) stack.
 
-Ir brings the following OPCUA Client features 
-- Read
-- Write
-- Browse
-- Monitor
-- Call
+Ir brings the following OPCUA Client features. 
+- **Read**   - read one or more UAVariables.
+- **Write**  - write one or more UAVariables.
+- **Browse**  - browse a UANode for references and child nodes.
+- **Monitor** - monitor a UAVariable for changes.
+- **MonitorEvents** - monitor a UAObject for events.
+- **Call** - call a method passing input arguments and getting output arguments.
+- **Explore** - explore the OPCUA server address space subtree and get information about nodes and references as JSON structure.
+ 
 
-The community edition works with one connection to one OPCUA server and can hanldes up to 100 simulatenous operation per nodes. 
+The community edition works with one connection to one OPCUA server and can handle up to 100 simultaneous operations per node. 
 
-The professional edition works with multiple connections to multiple OPCUA servers and have no limitation on the number of simultaneous operations per nodes, exxcept the one imposed by the OPCUA server itself.
+The professional edition works with multiple connections to multiple OPCUA servers and has no limitation on the number of simultaneous operations per node, except the one imposed by the OPCUA server itself.
 
 It has been designed with the following goals in mind:
 
 - easy to use, easy to configure; no deep OPCUA knowledge required.
-- provide visual tools to pick up nodeId by browsing the OPCUA server
+- provide visual tools to pick up nodeId by browsing the OPCUA server.
 - handle nodes address with either nodeId or browse path, or both. 
-- works well with complex OPCUA servers, exposing complex data structures (extension objects)
-- arbitraty number of node sharing the same connection
+- works well with complex OPCUA servers, exposing complex data structures (extension objects).
+- arbitrary number of nodes sharing the same connection
 - support for multiple connections to multiple OPCUA servers.
-- handles automatically transactions optimisation by grouping or splitting operations based on actual OPCUA server capabilities.
-- handles automatically reconnections in case of network failure, in a way that works
-- do not consume Client session unexpectedly on the OPCUA server side.
-- handles automatically OPCUA server certificate management
+- automatically handle transaction optimization by grouping or splitting operations based on actual OPCUA server capabilities.
+- automatically handle reconnections in case of network failure, in a way that works.
+- use Client sessions sparingly on the OPCUA server side.
+- handle automatically OPCUA server certificate management.
+- explore and monitor complex UAObject structures in the address space with ease.
 
 ## Getting Started 
 
-To install the node execute the following command inside the `.node-red`` directory:
+The easiest way to install the nodes is to use the Manage palette option in the Node-RED editor menu. In the Install tab, you can search for the @opcua/for-node-red package and click `install`. Once the installation is complete the nodes are available.
+
+Alternatively, you can install the nodes in your `Node-RED` configuration folder inside the `.node-red`` directory:
 
 ```console
+cd ~/.node-red
 npm install @opcua/for-node-red
 ```
+
+The nodes will be available after a restart of the Node-RED application.
+
 
 ### how to use
 
@@ -50,5 +60,5 @@ see the [documentation](./DOC.md) guide for more information
  
 ## Copyright and Licence
 
-Copyrigth (c) Sterfive SAS 2017-2023, under [proprietary licence](./LICENSE.md).
+Copyright (c) Sterfive SAS 2017-2023, under [proprietary licence](./LICENSE.md).
 

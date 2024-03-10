@@ -6,7 +6,7 @@ ALL USAGE OF THIS SOFTWARE IMPLIES A CONTRACT AND ROYALTIES PAID TO STERFIVE.COM
 By using the software, you accept these terms.
 If you don't accept them, do not use the software.
 
-Copyright (c) Sterfive SAS 2017-2023
+Copyright (c) Sterfive SAS 2017-2024
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.

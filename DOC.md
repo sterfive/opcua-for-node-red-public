@@ -7,14 +7,14 @@
 
 ![node palette](./resources/endpoint-edition.png)
 
-> the `check connection` button allows you to immediatly test your connection parameters and provide useful feedback to help you fix commonly found issues. 
+> the `check connection` button allows you to immediately test your connection parameters and provide useful feedback to help you fix commonly found issues. 
 
 ![subscriptions](./resources/endpoint-subscriptions.png)
 Three default subscriptions are automatically created for you: 
-Default (1 seconde), Fast (500ms) and Slow(5 secondes). They provide differents publishing intervals for the most common scenarii we usually find in typical IIoT applications. You can customize the parameter or delete or add new subscriptions if you wish. 
+Default (1 seconde), Fast (500ms) and Slow(5 secondes). They provide different publishing intervals for the most common scenarios we usually find in typical IIoT applications. You can customize the parameter or delete or add new subscriptions if you wish. 
 Most of the time, only a few subscriptions are needed. 
 
-Note: The default subscription cannot be deleted, it serves as a mechanism to keep the connection always active with the server by handligng a keepalive packet, and serves as well in the automatic reconnection mechanism, in case of a network outage. 
+Note: The default subscription cannot be deleted, it serves as a mechanism to keep the connection always active with the server by handling a keepalive packet, and serves as well in the automatic reconnection mechanism, in case of a network outage. 
 
 
 ## setting up custom certificate

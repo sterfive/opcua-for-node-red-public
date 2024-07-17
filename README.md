@@ -2,7 +2,7 @@
 
 This node is the second next-generation OPCUA Node for NodeRED built by Sterfive, the company that develops the [NodeOPCUA](https://node-opcua.github.io/) stack.
 
-Ir brings the following OPCUA Client features.
+It brings the following OPCUA Client features.
 
 -   **Read** - read one or more UAVariables.
 -   **Write** - write one or more UAVariables.
@@ -29,6 +29,11 @@ It has been designed with the following goals in mind:
 -   use Client sessions sparingly on the OPCUA server side.
 -   handle automatically OPCUA server certificate management.
 -   explore and monitor complex UAObject structures in the address space with ease.
+
+## At a glance - Watch the video
+
+[![Watch the video](https://img.youtube.com/vi/4dl2h15-LNc/maxresdefault.jpg)](https://youtu.be/4dl2h15-LNc?si=hxqUmG3dVfh4htBG)
+
 
 ## Getting Started
 

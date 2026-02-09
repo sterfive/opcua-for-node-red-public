@@ -123,7 +123,7 @@ You can subscribe online for a license at [https://www.sterfive.com/opcua/for-no
 
 ## Copyright 
 
-Copyright © 2017-2025 Sterfive SAS. All rights reserved. under [proprietary licence](./LICENSE.md).
+Copyright © 2017-2026 Sterfive SAS. All rights reserved. under [proprietary licence](./LICENSE.md).
 #  Licence
 
 - **Trial Use**: Granted for evaluation and non-production testing only, for a period of 30 days from the date of installation. Contact Sterfive for trial extensions or conversions to a full license.

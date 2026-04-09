@@ -24,6 +24,7 @@ We focus on optimization, stability, and handling the complex data structures fo
 | Reconnection          | ⚠️ Basic (Can get stuck)    | ✅ **Industrial-Grade** (Auto-healing connection logic)         |
 | Visual Tooling        | ❌ Manual copy-paste         | ✅ **Visual Browser** (Pick NodeIds from a tree view)           |
 | Structure Exploration | ❌ Not available             | ✅ **Explore Node** (Maps sub-trees to nested JSON)             |
+| Certificate Management| ⚠️ Manual & complex PKI setup| ✅ **Visual Certificate Manager** (Effortless UI to manage trust & PKI) |
 | Support               | Community / GitHub Issues   |  **Professional Support SLA**  available                                 |
 | Maintenance and updates | Volunteers / Community-driven |  **Regular Updates** and improvements by Sterfive                  |
 |Quality & Testing	|❌ No Unit Tests (Relies on user downloads/reports)	|✅ TDD Approach (Dev with highest standards & Unit Tests) |
@@ -51,7 +52,7 @@ We focus on optimization, stability, and handling the complex data structures fo
 - **Event & Alarms**: Full support for OPC UA Alarms & Conditions (**A&C**).
 - **Historical Data**: Native support for HistoryRead to pull logged data from historians with aggregation support.
 - **Robust Reconnection Logic**: Automatically handles reconnections in case of network failures, ensuring reliable operation in industrial environments.
-- **Certificate Management**: Automatically manages OPC UA server certificates for secure connections.
+- 🔐 **Visual Certificate Manager**: A built-in, effortless UI to generate PKI infrastructure, manage trusted/rejected server certificates, and securely handle endpoint authentication without touching OpenSSL.
 - **Multiple Connections**: Support for multiple connections to multiple OPC UA servers simultaneously.
 
 The nodes:

@@ -5,6 +5,10 @@
 
 Powered by NodeOPCUA—the industry-standard OPC UA stack for Node.js—and maintained by its original creators, Sterfive.
 
+## 🎬 Watch the presentation
+
+[![Watch the presentation](https://img.youtube.com/vi/NtA5KIaE3R4/maxresdefault.jpg)](https://youtu.be/NtA5KIaE3R4?si=TyrZZFhCO9w-07gL)
+
 
 ## 🚀 Why choose this over the free open-source alternative?
 
@@ -31,6 +35,52 @@ We focus on optimization, stability, and handling the complex data structures fo
 | License              | 🔓 Open Source MIT (no warranty/ as is) | 🛡️ **Commercial License** (Indemnified & Supported)                |
 
 [![Watch the video](https://img.youtube.com/vi/4dl2h15-LNc/maxresdefault.jpg)](https://youtu.be/4dl2h15-LNc?si=hxqUmG3dVfh4htBG)
+
+
+## ✨ What's New — Three Major Features
+
+### 1. 🔐 Embedded Certificate Manager
+
+> _Available since **v3.26.0**_
+
+Manage your OPC UA Public Key Infrastructure (PKI) directly from a built-in UI — no OpenSSL, no command line, no manual file shuffling.
+
+- Generate self-signed **application certificates** in a few clicks
+- **Rotate certificates** before they expire, without downtime
+- Manage the **trust list** and rejected list (trust / untrust server certificates)
+- Inspect certificate details (validity, subject, issuer, thumbprint)
+
+![Embedded Certificate Manager](resources/certificate-manager.png)
+
+### 2. 🌐 GDS Onboarding (PULL model)
+
+> _Available since **v3.30.0**_
+
+First-class support for **Global Discovery Server** enrollment using the **PULL** certificate management model defined by **OPC UA Part 12**.
+
+- Onboard Node-RED as an OPC UA application against a corporate GDS
+- Automatic Certificate Signing Request (CSR), signed-certificate retrieval, and trust list synchronization
+- Centralized certificate lifecycle management — ideal for fleets and regulated environments
+
+![GDS Onboarding](resources/gds-enrollment.png)
+
+### 3. 🖥️ Embedded OPC UA Server
+
+> _Available since **v3.34.0**_
+
+Turn Node-RED into a fully featured **OPC UA Server** — not just a client. The bootstrap helper takes care of all the heavy lifting of running a compliant OPC UA Server, so the flow developer only has to **instantiate** the server and **bind** variables, objects, and methods to their flow logic.
+
+Out of the box, the embedded server supports:
+
+- 🔐 **GDS PUSH certificate management** — central certificate lifecycle (issue, renew, trust list distribution) driven by a Global Discovery Server, no manual PKI choreography
+- 👥 **Roles & Permissions** — fine-grained access control on nodes and methods, as defined by OPC UA Part 3 / Part 5
+- 📡 **PubSub with MQTT transport** — publish dataset messages over MQTT brokers out of the box (UADP / JSON encodings)
+- 📚 **Companion specifications** — load standard NodeSet2 XML companion specs (DI, Robotics, Machinery, RFID, …) and expose your data through industry-standard information models
+- 🧩 **Heavy lifting handled** — address space construction, subscriptions, sessions, security, encoding, diagnostics — the developer only writes the instantiation and the bindings
+
+➡️ **Full documentation:** [Creating an OPC UA Server](https://opcua-for-node-red.doc.sterfive.com/docs/opcua-server/creating-an-opcua-server) on `opcua-for-node-red.doc.sterfive.com`.
+
+![Embedded OPC UA Server](resources/opcua-server.png)
 
 
 ## Key Features
@@ -124,7 +174,7 @@ You can subscribe online for a license at [https://www.sterfive.com/opcua/for-no
 
 ## Copyright 
 
-Copyright © 2017-2026 Sterfive SAS. All rights reserved. under [proprietary licence](./LICENSE.md).
+Copyright © 2017-2025 Sterfive SAS. All rights reserved. under [proprietary licence](./LICENSE.md).
 #  Licence
 
 - **Trial Use**: Granted for evaluation and non-production testing only, for a period of 30 days from the date of installation. Contact Sterfive for trial extensions or conversions to a full license.

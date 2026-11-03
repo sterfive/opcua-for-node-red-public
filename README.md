@@ -28,6 +28,8 @@ We focus on optimization, stability, and handling the complex data structures fo
 | Reconnection          | ⚠️ Basic (Can get stuck)    | ✅ **Industrial-Grade** (Auto-healing connection logic)         |
 | Visual Tooling        | ❌ Manual copy-paste         | ✅ **Visual Browser** (Pick NodeIds from a tree view)           |
 | Structure Exploration | ❌ Not available             | ✅ **Explore Node** (Maps sub-trees to nested JSON)             |
+| AI assistance         | ❌ None                      | 🧪 **OPC UA Agent (preview)** (Ask your OPC UA server a question, read-only) |
+| Connection control    | ❌ Redeploy to change the server | ✅ **Endpoint Control** (Change the server from a message, no redeploy) |
 | Certificate Management| ⚠️ Manual & complex PKI setup| ✅ **Visual Certificate Manager** (Effortless UI to manage trust & PKI) |
 | Support               | Community / GitHub Issues   |  **Professional Support SLA**  available                                 |
 | Maintenance and updates | Volunteers / Community-driven |  **Regular Updates** and improvements by Sterfive                  |
@@ -37,9 +39,31 @@ We focus on optimization, stability, and handling the complex data structures fo
 [![Watch the video](https://img.youtube.com/vi/4dl2h15-LNc/maxresdefault.jpg)](https://youtu.be/4dl2h15-LNc?si=hxqUmG3dVfh4htBG)
 
 
-## ✨ What's New — Three Major Features
+## ✨ What's New
 
-### 1. 🔐 Embedded Certificate Manager
+### 🧪 Ask your plant — OPC UA Agent (preview)
+
+> _Available since **v3.43.0**_
+
+To find out why an alarm is active, you used to browse and compare nodes by hand. Now you ask, in plain language, and the editor answers.
+
+- **A chat in the editor sidebar.** Ask while you build a flow. Answers come back as Markdown with diagrams in the OPC UA notation. Click a NodeId to copy it, and send the nodes you selected along with the question.
+- **Place the answer on the canvas.** A **Place on canvas** button imports the nodes (or a whole flow) with the endpoint and the namespace aliases they need. Ctrl+Z removes them. Nothing is deployed for you.
+- **An OPC UA Agent node for your flows.** Send a prompt, get the answer, a trace of the tool calls and progress messages. Use it in a Dashboard 2 chat page.
+- **Read-only, on the endpoint you already have.** The agent cannot write to your server.
+- **Your AI provider.** The **AI Provider** node takes Anthropic, an OpenAI-compatible service, or the Gemini preset. The question and the data the agent reads go to the provider you choose.
+
+The nodes are off by default while in preview. To switch them on, set `opcUaAgentEnabled: true` in `settings.js`. Unlimited use needs a Professional licence; without it, a small daily allowance applies.
+
+![Ask the plant](resources/ask-the-plant.gif)
+
+### 🔀 Change the connection of a running flow
+
+> _Available since **v3.43.0**_
+
+Send `connect`, `reset`, `validate` or `status` to the **Endpoint Control** node, from a dashboard button or a Function node. Every Read, Write, Call and Monitor node on that endpoint follows at once, with no new deploy. A wrong setting cannot break the live session: the previous settings return if the new server does not answer. The **Endpoint Events** node tells you each time the connection changes.
+
+### 🔐 Embedded Certificate Manager
 
 > _Available since **v3.26.0**_
 
@@ -52,7 +76,7 @@ Manage your OPC UA Public Key Infrastructure (PKI) directly from a built-in UI �
 
 ![Embedded Certificate Manager](resources/certificate-manager.png)
 
-### 2. 🌐 GDS Onboarding (PULL model)
+### 🌐 GDS Onboarding (PULL model)
 
 > _Available since **v3.30.0**_
 
@@ -64,7 +88,7 @@ First-class support for **Global Discovery Server** enrollment using the **PULL*
 
 ![GDS Onboarding](resources/gds-enrollment.png)
 
-### 3. 🖥️ Embedded OPC UA Server
+### 🖥️ Embedded OPC UA Server
 
 > _Available since **v3.34.0**_
 
@@ -115,6 +139,12 @@ The nodes:
 -   **Call** - call a method passing input arguments and getting output arguments.
 -   **Explore** - explore the OPCUA server address space subtree and get information about nodes and references as JSON structure.
 -   **HistoryRead** - read historical data from an OPCUA server.
+-   **ExtensionObject** - build a structured value (UDT) from a data type of the server, to write it or pass it to a method.
+-   **FileOperation** - read and write the files of an OPC UA server.
+-   **Endpoint Control** - change the server, the security settings or the login of a running flow with a message.
+-   **Endpoint Events** - get a message for every change of the connection.
+-   **OPC UA Agent** (preview) - ask the OPC UA server a question and get an answer, read-only.
+-   **AI Provider** (preview) - the settings of the AI model that the Agent uses.
 
 
 ## At a glance - Watch the video
@@ -130,13 +160,13 @@ The explore node:
 
 Different ways to use the nodes:
 
-[![Watch the video](https://img.youtube.com/vi/6RbeEgzPjQA/maxresdefault.jpg)](https://youtu.be/6RbeEgzPjQA&t?si=hxqUmG3dVfh4htBG)
+[![Watch the video](https://img.youtube.com/vi/6RbeEgzPjQA/maxresdefault.jpg)](https://youtu.be/6RbeEgzPjQA?si=hxqUmG3dVfh4htBG)
 
 ## Getting Started
 
 The easiest way to install the nodes is to use the Manage palette option in the Node-RED editor menu. In the Install tab, you can search for the @opcua/for-node-red package and click `install`. Once the installation is complete the nodes are available.
 
-Alternatively, you can install the nodes in your `Node-RED` configuration folder inside the `.node-red`` directory:
+Alternatively, you can install the nodes in your `Node-RED` configuration folder inside the `.node-red` directory:
 
 ```console
 cd ~/.node-red
@@ -145,7 +175,7 @@ npm install @opcua/for-node-red
 
 The nodes will be available after a restart of the Node-RED application.
 
-## how to use
+## How to use
 
 see the [documentation](https://opcua-for-node-red.doc.sterfive.com) guide for more information
 
@@ -174,7 +204,7 @@ You can subscribe online for a license at [https://www.sterfive.com/opcua/for-no
 
 ## Copyright 
 
-Copyright © 2017-2025 Sterfive SAS. All rights reserved. under [proprietary licence](./LICENSE.md).
+Copyright © 2017-2026 Sterfive SAS. All rights reserved. under [proprietary licence](./LICENSE.md).
 #  Licence
 
 - **Trial Use**: Granted for evaluation and non-production testing only, for a period of 30 days from the date of installation. Contact Sterfive for trial extensions or conversions to a full license.

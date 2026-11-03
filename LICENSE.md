@@ -18,4 +18,13 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+## Third-party components
+
+This software includes third-party components. Each one stays under its own licence, which
+is listed with its name and version in the software bill of materials shipped with this
+package (software-bom.md). Nothing in these terms limits the rights that a component's own
+licence gives you for that component. For a component under the Mozilla Public License 2.0,
+the source code of the version we ship is available from the project named in the bill of
+materials, and from Sterfive on request.
+
 [contact Sterfive](https://www.sterfive.com/opcua/for-node-red) for more information
